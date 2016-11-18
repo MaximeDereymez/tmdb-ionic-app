@@ -1,8 +1,8 @@
 {
-  "STATES.HOME": {
-    "TITLE": "Page d'accueil",
+  "STATES.TEST": {
+    "TITLE": "Test : français",
     "CONTENT": "Bonjour depuis {{ greeter }}",
     "BUTTON": "Afficher la popup",
-    "TEST": "Aller à test"
+    "HOME": "Aller à home"
   }
 }
