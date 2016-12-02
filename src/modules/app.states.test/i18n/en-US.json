@@ -1,8 +1,0 @@
-{
-  "STATES.TEST": {
-    "TITLE": "Test : english",
-    "CONTENT": "Hello from {{ greeter }}",
-    "BUTTON": "Show popup",
-    "HOME": "Go to home"
-  }
-}
