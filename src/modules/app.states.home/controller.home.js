@@ -18,24 +18,24 @@
     	statesService.search($scope.search.query)
     		.then(function (results) {
     			$scope.search.results = results;
-    		});
+    	});
     };
 
     controller.discoverMovie = function () {
-    if (popupService.isOpen()) { return; }
-    statesService.discoverMovie().then(function (movie) {
-      popupService.open(module, 'smartphone/popup.discover', movie);
+      if (popupService.isOpen()) { return; }
+      statesService.discoverMovie().then(function (movie) {
+        popupService.open(module, 'smartphone/popup.discover', movie);
+      });
+    };
+
+    $scope.$on('$ionicView.enter', function () {
+      shakeService.listen(controller.discoverMovie);
     });
-  };
 
-  $scope.$on('ionicView.enter', function () {
-    shakeService.listen(controller.discoverMovie);
-  });
-
-  $scope.$on('ionicView.leave', function () {
-    shakeService.stopListening();
-  });
-}
+    $scope.$on('$ionicView.leave', function () {
+      shakeService.stopListening();
+    });
+  }
 
   module.controller('homeController', [
     '$scope',
