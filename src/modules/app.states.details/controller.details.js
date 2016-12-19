@@ -8,6 +8,7 @@
     var controller = this;
 
     $scope.movieData = movieData;
+    $scope.poster = "http://image.tmdb.org/t/p/w185"+movieData.poster_path;
   }
 
   module.controller('detailsController', [
