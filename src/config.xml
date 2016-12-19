@@ -9,7 +9,7 @@
   <name>$PACKAGE_NAME</name>
   <description>$PACKAGE_DESCRIPTION</description>
   <content src="smartphone.html"/>
-  <access origin="https.ilage.tmdb.org" launch-external="yes"/>
+  <access origin="https://image.tmdb.org"/>
   <preference name="BackupWebStorage" value="none"/>
   <preference name="Orientation" value="portrait"/>
   <preference name="DisallowOverscroll" value="true"/>
