@@ -1,4 +1,7 @@
 ion-view.view-details(view-title="{{ movieData.title }}")
   ion-content
-    img(ng-hide="movieData.poster_path==null", src='{{ "http://image.tmdb.org/t/p/w185"+movieData.poster_path }}')
+    img.padding(ng-if="movieData.poster_path!=null", src="{{ 'http://image.tmdb.org/t/p/w185'+movieData.poster_path }}")
     p.padding {{ movieData.overview }}
+    ion-list
+      ion-item(ng-repeat="actor in movieCast.cast")
+        | {{ actor.name }} as {{ actor.character}}

@@ -4,16 +4,17 @@
 (function (module) {
   'use strict';
 
-  function DetailsController($scope, movieData) {
+  function DetailsController($scope, movieData, movieCast) {
     var controller = this;
 
     $scope.movieData = movieData;
-    $scope.poster = "http://image.tmdb.org/t/p/w185"+movieData.poster_path;
+    $scope.movieCast = movieCast;
   }
 
   module.controller('detailsController', [
     '$scope',
     'movieData',
+    'movieCast',
     DetailsController
   ]);
 

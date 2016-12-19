@@ -10,6 +10,10 @@
     return statesService.getMovie($stateParams.id);
   }
 
+  function movieCastResolver($stateParams, statesService) {
+    return statesService.getCast($stateParams.id);
+  }
+
   function config($stateProvider) {
     $stateProvider.state(STATE_DETAILS, {
       data: { module: module, navBar: true },
@@ -24,6 +28,11 @@
           '$stateParams',
           'statesService',
           movieDataResolver
+        ],
+        movieCast: [
+          '$stateParams',
+          'statesService',
+          movieCastResolver
         ]
       }
     });

@@ -30,6 +30,13 @@
       });
     };
 
+    service.getCast = function(id) {
+      return httpService.get('/3/movie/' + id + '/credits', {
+        language: i18nService.getLocale(),
+        api_key: API_KEY
+      });
+    };
+
     service.discoverMovie = function () {
       return httpService.get('/3/discover/movie', {
         'release_date.lte': moment().add(3, 'months').format('YYYY-MM-DD'),
